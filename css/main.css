@@ -1,28 +1,13 @@
 /* TOdo break a lunh
-  1)базові стилі які задаєш для тегів краще винести в окремий файл 
+  done 1)базові стилі які задаєш для тегів краще винести в окремий файл 
   створи файл reset.css повинось ці стилі та підключи до html
-  2)Розділяй блоки стилів через enter, краще читається і це про чистоту коду :)
+  done 2)Розділяй блоки стилів через enter, краще читається і це про чистоту коду :)
   Форматуй текст завжди)
 */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  background: #FDFCEF;
-}
-* {
-  box-sizing: border-box;
-}
-h1,h2,h3,h4,h5 {
-  margin: 0;
-  font-weight: 700;
-    line-height: 1.4em;
-}
-p {
-  margin: 0;
-  line-height: 1.37em;
-}
+
+
+
+
 .container {
   width: 1110px;
   margin: 0 auto;
@@ -31,34 +16,46 @@ p {
 .header {
   padding-top: 60px;
 }
-h1 {
-  font-size: 50px;
-}
-h2 {
-  font-size: 40px;
-  text-align: center;
-}
+
+
 .offer {
   padding-top: 82px;
 }
+
 .offer__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 180px;
+  margin-bottom: 120px;
 }
-.offer__body {
+
+.group {
   width: 465px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+.group__title {
+    text-align: left;
+}
+
+.offer__group_img {
+  max-width: 465px;
+  max-height: 465px;
+  padding: 105px;
+  border-radius: 70px;
+  background: linear-gradient(180deg, #ffe195 0%, #ff5b5b 100%);
+  width: 100%;
+  height: 100%;
+} 
+
 .logo {
   display: block;
   margin: 0 auto;
 }
 
-.offer__body__link {
+.group__btn {
   border-radius: 100px;
   background: #ff6861;
   color: #fff;
@@ -71,7 +68,8 @@ h2 {
   transition: 0.3s ease-in;
   transition-property: background, color;
 }
-.offer__body__link:hover {
+
+.group__btn:hover {
     color: #ff6861;
     background: #ffe195;
 }
@@ -83,60 +81,65 @@ background-color: #fff;
 } */
 
 
-.offer__body__description {
+.group__description {
   font-size: 18px;
   width: 423px;
 }
 
-.caw {
-  padding: 105px;
-  border-radius: 70px;
-  background: linear-gradient(180deg, #ffe195 0%, #ff5b5b 100%);
-}
-.image {
+.img__item_img {
   width: 73px;
   height: 73px;
   margin-right: 34px;
 }
-.img-item {
+
+.img__item {
   display: flex;
   align-items: center;
   margin-bottom: 41px;
 }
-.img-title {
+
+.img__wrap_title {
   font-size: 30;
   margin-bottom: 11px;
 }
-.images {
+
+.features__images {
   display: flex;
   flex-direction: column;
   gap: 41;
   width: 720px;
   margin: 70px auto 0 auto;
+  margin-bottom: 120px;
 }
+
 .practice-wrap {
   border-radius: 60px;
   background: linear-gradient(102deg, #fff6df 17.38%, #ffdfde 81.25%);
   display: flex;
   align-items: center;
   padding: 76px 126px 75px 122px;
+  margin-bottom: 120px;
 }
+
 .block-practic {
   width: 475px;
 }
-.practice-title {
-  text-align: left;
-}
+
 .practice-text {
     margin: 24px 0;
     width: 371px;
 }
+
 footer {
     padding: 120px 0;
     text-align: center;
 }
-.beetle {
 
+.offer__practice_img {
+  padding: 76px 125px 75px 122px;
+  justify-content: center;
+  align-items: center;
+  gap: 101px;
 }
 
 /* Responsive */
@@ -154,24 +157,30 @@ footer {
     .container {
         max-width: 720px;
     }
+
     .offer__wrapper {
         flex-direction: column;
         text-align: center;
         gap: 80px;
     }
+
     .offer__body__link {
         margin: 0 auto;
     }
+
     .practice-wrap {
       flex-direction: column;
     }
+
    .block-practic {
     text-align: center;
     padding: 101px 37px;
    }
+
    .practice-text {
     margin: 24px auto;
    }
+
    .practice-title {
     text-align: center;
    }
@@ -182,11 +191,13 @@ footer {
     .container {
         max-width: 540px;
     }
+
     .img-item {
       flex-direction: column;
       text-align: center;
       gap: 34px;
     }
+
   .images {
     width: auto;
     gap: 41px;
@@ -198,17 +209,21 @@ footer {
     .container {
         padding: 0 15px;
     }
+
     .caw {
       width: 100%;
       display: block;
     }
+
     .offer__body__title {
       width: auto;
     }
+
     .practice-wrap {
       width: 100%;
       padding: 70px 37px ;
     }
+
     .beetle {
       width: 201px;
     }

@@ -9,16 +9,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
 </head>
 <!--  
     TODO Zhenia, take a break for a tea. 
     1)Переписати розмітку, а саме назви класів згідно BEM, нижче написав приклад
     https://avivi.pro/ua/blog/metodologiya-bem-v-deystvii/
-    2)Називай класи абстрактно а не асоціативно, бо в тебе якись зоопарк :)
+    done 2)Називай класи абстрактно а не асоціативно, бо в тебе якись зоопарк :)
     наприклад не caw а offer__wrapper_image, а якщо такий контейнер для фото
     використовуєтсья безліч разів то просто c-img (наприклад, c - префікс (component))
-    3)Блок з описом, саме біля корови та комахи, вони ідентичні ,
+   done 3)Блок з описом, саме біля корови та комахи, вони ідентичні ,
         і тому краще написати їх окремим компонентом
+        group
+        group__title
+        group__description
+        group__btn
+
+        done 4)Прибити комаху до правого боку  
+        done 
+        done 5) відступи між секціями
 -->
 
 <body>
@@ -32,23 +41,26 @@
     <section class="offer">
         <div class="container">
             <div class="offer__wrapper">
-                <div class="offer__body">
-                    <h1 class="offer__body__title">Legendary farm</br>game in your</br>hands</h1>
-                    <p class="offer__body__description">Play as a Helga the Cow to protect your animal friends from the Farmer</p>
-                    <a href="#" class="offer__body__link">Play now</a>
+                <div class="group">
+                    <h1 class="group__title">Legendary farm</br>game in your</br>hands</h1>
+                    <p class="group__description">Play as a Helga the Cow to protect your animal friends from the Farmer</p>
+                    <a href="#" class="group__btn">Play now</a>
                 </div>
-               <div></div> <img class="caw" src="img/image 1.jpg" alt="Caw">
+                <div class="offer__group_img">
+                    <img class="caw" src="img/image 1.jpg" alt="Caw">
+                </div> 
             </div>
         </div>
     </section>
+
     <section class="features" id="features">
         <div class="container">
             <h2>What`s inside the game</h2>
-           <div class="images"> <!--   BEM - features__images -->
-                <div class="img-item"> <!--   BEM - img__item -->
-                    <img class="image" src="img/forItems/shoes.png" alt="shoes"> <!--   BEM - img__item_img -->
-                    <div class="img-wrap">  <!--   BEM - img__wrap -->
-                        <h3 class="img-title">Run as fast as you can</h3><!--   BEM - img__wrap_title -->
+           <div class="features__images"> <!--   BEM - features__images -->
+                <div class="img__item"> <!--   BEM - img__item -->
+                    <img class="img__item_img" src="img/forItems/shoes.png" alt="shoes"> <!--   BEM - img__item_img -->
+                    <div class="img__wrap">  <!--   BEM - img__wrap -->
+                        <h3 class="img__wrap_title">Run as fast as you can</h3><!--   BEM - img__wrap_title -->
                         <p>You have to be very fast to not be caught by the Farmer</p>
                     </div>
                 </div>
@@ -70,26 +82,29 @@
         </div>
         </div>
     </section>
+
  <!-- тут каша з назвами -->
     <section class="practice" id="practice">
         <div class="container">
             <div class="practice-wrap">
-                <div class="block-practic">
-                    <h2 class="practice-title">More animals you save, closer your victory!
+                <div class="group">
+                    <h2 class="group__title">More animals you save, closer your victory!
                     </h2>
-                    <p class="practice-text">Don`t miss the chance to make the Farmer cry again. Animals, be strong!</p>
+                    <p class="group__description">Don`t miss the chance to make the Farmer cry again. Animals, be strong!</p>
                      <!-- тут супер, я зрозумів що ти хотів перевикористати але 
                         зараз виходить так що в тебе секція practice а назва 
                         offer__body__link, краще назвати якось btn і це буде 
                         загалний клас який буде задавати стилі кнопки
                      -->
 
-                    <a href="#" class="offer__body__link">Play now</a>
+                    <a href="#" class="group__btn">Play now</a>
                 </div>
-                <img class="beetle" src="img/image 4.png" alt="beetle">
+                <div class="offer__practice_img"></div>
+                <img src="img/image 4.png" alt="beetle">
             </div>
         </div>
     </section>
+
     <footer class="footer" id="footer">
         <div class="container">
             <p class="footer__text">2030 Ⓒ All rights reserved</p>
