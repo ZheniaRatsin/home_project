@@ -84,6 +84,7 @@ background-color: #fff;
 .group__description {
   font-size: 18px;
   width: 423px;
+  text-align: left;
 }
 
 .img__item_img {
